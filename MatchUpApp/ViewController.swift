@@ -151,7 +151,21 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     func showAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
-        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        //handler means the further action/codes we want to execute after press the OK button
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: { action in
+            //reset datas as what we initialize in the beginning
+            self.cardsArray.removeAll()
+            self.cardsArray = [Card]()
+            self.cardsArray = self.model.getCards()
+            //the most important step: reload the collection view.
+            self.collectionView.reloadData()
+            self.milliseconds = 30 * 1000
+            self.timer = Timer.scheduledTimer(timeInterval: 0.001, target: self, selector: #selector(self.timerFired), userInfo: nil, repeats: true)
+            
+            RunLoop.main.add(self.timer!, forMode: .common)
+            
+        })
+        
         alert.addAction(okAction)
         
         present(alert, animated: true, completion: nil)
