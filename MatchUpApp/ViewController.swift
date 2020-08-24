@@ -48,6 +48,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             timer?.invalidate()
             
             checkForGameEnd()
+            return
         }
     }
     //how many item do we want to display, return the sum of item
@@ -160,6 +161,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             //the most important step: reload the collection view.
             self.collectionView.reloadData()
             self.milliseconds = 30 * 1000
+            self.timerLabel.textColor = UIColor.black
             self.timer = Timer.scheduledTimer(timeInterval: 0.001, target: self, selector: #selector(self.timerFired), userInfo: nil, repeats: true)
             
             RunLoop.main.add(self.timer!, forMode: .common)

@@ -16,6 +16,7 @@
 		C56D6D9124F0EDE80073300B /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56D6D9024F0EDE80073300B /* CardModel.swift */; };
 		C56D6D9324F0EEC50073300B /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56D6D9224F0EEC50073300B /* Card.swift */; };
 		C56D6D9524F0F70F0073300B /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56D6D9424F0F70F0073300B /* CardCollectionViewCell.swift */; };
+		C58D575424F3505700FE01EC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58D575324F3505700FE01EC /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		C56D6D9024F0EDE80073300B /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
 		C56D6D9224F0EEC50073300B /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		C56D6D9424F0F70F0073300B /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
+		C58D575324F3505700FE01EC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				C56D6D7C24F0CE9A0073300B /* AppDelegate.swift */,
 				C56D6D7E24F0CE9A0073300B /* SceneDelegate.swift */,
 				C56D6D8024F0CE9A0073300B /* ViewController.swift */,
+				C58D575324F3505700FE01EC /* HomeViewController.swift */,
 				C56D6D9224F0EEC50073300B /* Card.swift */,
 				C56D6D9024F0EDE80073300B /* CardModel.swift */,
 				C56D6D9424F0F70F0073300B /* CardCollectionViewCell.swift */,
@@ -152,6 +155,7 @@
 				C56D6D9324F0EEC50073300B /* Card.swift in Sources */,
 				C56D6D7D24F0CE9A0073300B /* AppDelegate.swift in Sources */,
 				C56D6D9524F0F70F0073300B /* CardCollectionViewCell.swift in Sources */,
+				C58D575424F3505700FE01EC /* HomeViewController.swift in Sources */,
 				C56D6D7F24F0CE9A0073300B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
