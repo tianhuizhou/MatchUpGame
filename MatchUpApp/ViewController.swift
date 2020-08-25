@@ -16,16 +16,17 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     let model = CardModel()
     var cardsArray = [Card]()
+    var level = 8
     
     var timer:Timer?
-    var milliseconds: Int = 30 * 1000
+    var milliseconds: Int = 50 * 1000
     var firstFlippedCard: IndexPath?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        cardsArray = model.getCards()
+        cardsArray = model.getCards(gameLevel: level)
         
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -142,9 +143,11 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         if isWon {
             showAlert(title: "Congradulation!", message: "You got it!")
+            level += 1
         } else {
             if milliseconds <= 0 {
                 showAlert(title: "Time's Up!", message: "You lose!")
+                level = 8
             }
         }
     }
@@ -157,7 +160,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             //reset datas as what we initialize in the beginning
             self.cardsArray.removeAll()
             self.cardsArray = [Card]()
-            self.cardsArray = self.model.getCards()
+            self.cardsArray = self.model.getCards(gameLevel: self.level)
             //the most important step: reload the collection view.
             self.collectionView.reloadData()
             self.milliseconds = 30 * 1000

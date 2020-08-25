@@ -10,14 +10,14 @@ import Foundation
 
 class CardModel {
     
-    func getCards() -> [Card] {
+    func getCards(gameLevel: Int = 8) -> [Card] {
         
         //declare a new empty array for storing cards
         var arrayOfCards = [Card]()
         
         var arrayOfRamdomNum = [Int]()
         
-        while (arrayOfRamdomNum.count < 8){
+        while (arrayOfRamdomNum.count < gameLevel){
             
             let randomNumber = Int.random(in: 1...13)
             
